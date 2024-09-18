@@ -13,10 +13,11 @@ services:
     environment:
       FLASK_APP: app.py
       FLASK_ENV: development
+#!!!Don't hardcode secrets in your code!!!
       DATABASE_URL: postgresql://flaskuser:Pass.Flask@!@db:5432/flaskdb #flaskdb=dbname-flaskuser=dbusername
   db:
     image: postgres:latest
     environment:
-      POSTGRES_USER: flaskuser
-      POSTGRES_PASSWORD: Pass.Flask@!
-      POSTGRES_DB: flaskdb
+      POSTGRES_USER: SECRET
+      POSTGRES_PASSWORD: SECRET
+      POSTGRES_DB: SECRET
